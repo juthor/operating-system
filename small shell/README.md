@@ -17,7 +17,7 @@
   ③ while문 밖에서는 argv[ndx]=NULL로 하고 argc=ndx를 한다.  
   ④ if문을 사용하여 문자열 비교 함수인 strcmp((argv[0], “exit”)==0)이면 끝내도록 하고 execute(argv)를 통해 execute함수를 실행한다.    
   
-#### <execute함수>  
+#### execute함수  
  execute함수에서는 인자로 char **argv를 받는다. fork하고 파일을 새로 생성할 것이기에 pid_t pid, int status, fd, i, background로 돌아가는지 여부에 따른 변수 background, redirection인지 여부에 따른 변수 re_dir, 새로 만들 file을 위한 file이름 변수인 char형 file_name을 변수로 한다.  
   
  * 반복문 for(i=0; argv[i]!=0; i++)  
