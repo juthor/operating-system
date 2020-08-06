@@ -1,4 +1,4 @@
-# Small Shell
+# Pipe
 
 ### 1. Problem definition(I/O, function)  
  * p2, p3을 fork하고 나서 10개의 문자를 읽고 pipe1에 넣는다. p2, p3이 exit할 때까지 기다린다.  
