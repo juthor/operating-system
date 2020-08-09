@@ -19,28 +19,7 @@
  ③ write(fd2[1], chan_up, EOD)를 통해 fd2[1]에 chan_up을 쓰도록 한다.  
  ④ close(fd2[1]), close(fd1[0])을 하고 exit(0)을 통해 자식 프로세스 process2가 끝이 났다.  
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #### process3  
  ① close(fd2[1])을 통해 사용하지 않을 channel을 닫는다.  
  ② read(fd2[0], output, EOD)를 통해 output에 fd2[0]의 값을 쓰고 printf를 통해 출력하도록 한다.  
  ③ close(fd2[0])을 하고 exit(0)을 통해 자식 프로세스 process3이 끝이 났다.  
-
-----------------------------
-=======
-=======
->>>>>>> 6ebd01d7f94a2f133e157b0a78e23ef2e39c4ff1
-=======
->>>>>>> 6ebd01d7f94a2f133e157b0a78e23ef2e39c4ff1
-### process3  
- ① close(fd2[1])을 통해 사용하지 않을 channel을 닫는다.  
- ② read(fd2[0], output, EOD)를 통해 output에 fd2[0]의 값을 쓰고 printf를 통해 출력하도록 한다.  
- ③ close(fd2[0])을 하고 exit(0)을 통해 자식 프로세스 process3이 끝이 났다.  
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 6ebd01d7f94a2f133e157b0a78e23ef2e39c4ff1
-=======
->>>>>>> 6ebd01d7f94a2f133e157b0a78e23ef2e39c4ff1
-=======
->>>>>>> 6ebd01d7f94a2f133e157b0a78e23ef2e39c4ff1
