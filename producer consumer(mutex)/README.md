@@ -7,7 +7,7 @@
  * Consumer의 removal은 pthread로 만들고 만약 linked list가 비어있으면 기다린다.  
   - head pointer를 가지고 있어야 하고, 가능하면 데이터를 list의 head에서 get하고 remove한다.  
   - output data를 console에 출력한다.  
--------------------------
+- - -
 
 ### 2. Method solved
 #### 구조체 정의
@@ -38,3 +38,5 @@
 #### Main  
  * main문에서 makeNode함수를 행하고 pthread_create를 통해 threads[0], threads[1] 각각을 생성한다.  
  * 생성한 pthread를 join상태로 만들고 return 0를 한다.  
+
+- - -
