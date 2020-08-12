@@ -5,7 +5,7 @@
  * tick을 1씩 증가시킨다.  
 - - -   
 ### 2. Method solved
-#### __main문__ 
+#### __main__ 
  ① signal(SIGALRM, alarm_handler)를 하여 SIGALRM이 들어오면 alarm_handler로 갈 수 있도록 set한다.  
  ② itimerval 구조체의 정해진 규정대로 delay.it_val delay.it_value.tv_sec=1, delay.it_value.tv_usec=0, delay.it_interval.tv_sec=0, delay.it_interval.tv_usec=10000을 설정한다.  
  ③ ret=setitimer(ITIMER_REAL, &delay, NULL)을 통해 ret로 if문을 통해 에러가 발생했는지 여부를 체크하여 에러가 발생했을 경우 perror("setitiemr")를 출력한다.  
