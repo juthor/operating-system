@@ -5,7 +5,6 @@
  * One thread Timer 코드 기반으로 문제를 해결한다.
  * pthread_condition cond_array[10]을 하고 pthread_mutex API_Mutex를 한다. struct TCB TCB_array[10]을 만들고 API tt_thread_register로 인자 period, thread_id를 가지는 thread 등록 함수를 만든다.  
   - 10msec를 주기로 하고 pthread_mutex_lock을 걸고 TCB[thread_id].period=period, TCB[thread_id].thread_id=thread_id, TCB[thread_id].time_left_to_invoke=period를 하고 pthread_mutex_unlock을 통해 Mutex를 풀어준다.  
- * time-triggered thread에서는 직접 만들어서 현재 시간을 출력하도록 한다.
   
 ### 2. Method solved  
 
@@ -16,7 +15,7 @@
  ① mutex_lock을 걸고 pthread_cond_wait을 한 후에 mutex_unlock을 한다.
 
 #### __time_triggered thread__  
- ① tt_thread_register에 myperiod, myid를 넣어서 TCB_array를 set하고 id_tmp에 myid를 넣어 값이 변할 것을 미리 고려하여 저장한다. 
+ ① tt_thread_register에 myperiod, myid를 넣어서 TCB_array를 set하고 id_tmp에 myid를 넣어 값이 변할 것을 미리 고려하여 저장한다.  
  ② myid++, myperiod+=3000을 하고, current time을 출력한다.  
 
 #### __main__  
