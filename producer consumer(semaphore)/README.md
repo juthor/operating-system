@@ -33,5 +33,3 @@
  ③ shmp->out++을 하고 버퍼의 크기가 100이므로 out%100을 통해 계속 반복하여 사용할 수 있도록 하였다. output=shmp->buffer[shmp->out]를 통해 buffer에서 shmp->out에 저장된 값을 output으로 가지고 오도록 한다.  
  ④ sem_post(&shmp->num_space)를 통해 producer가 space가 없어서 data를 버퍼에 집어넣지 못하고 있을 수 있으므로 signal을 보내 producer가 block된 상태라면 깨워준다. 그리고 consumer의 output값을 출력한다.  
  ⑤ wait(&pid2)를 하여 process2가 죽을 때까지 기다리도록 하였다. 그리고 sem_destroy를 통해 semaphore를 제거하고 shm_unlink와 munmap을 통해 맵핑된 공유메모리를 해제한다.  
-
-- - - 

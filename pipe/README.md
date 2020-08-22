@@ -23,4 +23,3 @@
  ① close(fd2[1])을 통해 사용하지 않을 channel을 닫는다.  
  ② read(fd2[0], output, EOD)를 통해 output에 fd2[0]의 값을 쓰고 printf를 통해 출력하도록 한다.  
  ③ close(fd2[0])을 하고 exit(0)을 통해 자식 프로세스 process3이 끝이 났다.  
-- - -

@@ -16,4 +16,3 @@ fork로 client가 connect를 원할 때마다 자식을 생성하였는데, fork
  ① main문에서 thread 생성을 통해 동작한다. 변수를 설정하고 nsd=(int)*((int *)arg)를 통해 main문에서 연결이 성공적으로 이루어져서 반환된 새소켓 번호를 가지도록 한다.  
  ② while문에서 recv함수로 문자를 받고 받은 문자를 그대로 send함수를 통해 전송한다.   
  ③ close(nsd)를 통해 threadfunc를 종료한다.  
-- - -

@@ -21,4 +21,4 @@
  ② while(!pthread_cond_wait(&cond, &mutex))을 통해 time_t current_time, struct tm *current_date로 현재시간을 가져올 수 있도록 한다.  
  ③ char tmp[100]을 설정하고 time(&current_time)을 통해 현재 시간을 가져오도록 하고 current_date=localtime(&current_time), strcmp(tmp, asctime(current_date))로 tmp에 current_date를 넣도록 하였다.  
  ④ pthread_mutex_unlock을 해주고 다시 lock을 하여 현재 시간을 출력하고 다시 mutex를 unlock한다.  
- - - - 
+ 

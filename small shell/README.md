@@ -43,5 +43,3 @@
   
  * __조건문 if(background==1)__  
   ① background가 1이라면 background로 실행되어야 하므로 waitpid(WNOHANG, &status, 0)을 통해 자식 process가 끝날 때까지 기다리지 않고 부모프로세스가 하던 일을 하도록 한다.  
-
-- - -
