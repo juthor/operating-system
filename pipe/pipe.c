@@ -17,9 +17,7 @@ int main(void)
     pipe(fd2);
     if((pid1=fork())==0)//child1
     {
-        close(fd1[1]);//Don't use pipe1, fd1[1] write channel
-            
-        
+        close(fd1[1]);//Don't use pipe1, fd1[1] write channel     
         read(fd1[0], chan_up, EOD);
             
         for(i=0; i<EOD; i++)//Change capital letter, if small letter
@@ -31,8 +29,7 @@ int main(void)
         write(fd2[1], chan_up, EOD);
         
         close(fd2[1]);
-        close(fd1[0]);
-                
+        close(fd1[0]);     
         
         exit(0);//pid1 child die
     }
